@@ -8,7 +8,7 @@ const logger = create_Logger.createLogger();
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['authReducer'],
+  whitelist: ['AuthReducer'],
 };
 const persistedReducer = persistReducer(persistConfig, RootReducer);
 

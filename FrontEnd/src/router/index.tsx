@@ -15,15 +15,10 @@ const Stack = createNativeStackNavigator();
 // let token = '';
 // let isLoading = false;
 const Routes = () => {
-  const {token, isLoading} = useSelector((store: ReducersModal) => ({
-    token: store.AuthReducer.token,
-    isLoading: store.SplashReducer.isLoading,
-  }));
-
-  // const token = useSelector((store: ReducersModal) => store.AuthReducer.token);
-  // const isLoading = useSelector(
-  //   (store: ReducersModal) => store.SplashReducer.isLoading,
-  // );
+  const {token} = useSelector((store: ReducersModal) => store.AuthReducer);
+  const {isLoading} = useSelector(
+    (store: ReducersModal) => store.SplashReducer,
+  );
 
   InteractionManager.runAfterInteractions(() => {
     CommonFunctions.linearAnimation();
